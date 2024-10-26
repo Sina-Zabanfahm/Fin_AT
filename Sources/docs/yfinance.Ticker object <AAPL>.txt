@@ -1,7 +1,17 @@
+- AAPL: No analysis data found, symbol may be delisted
+- AAPL: Failed to create balance-sheet financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+- AAPL: No summary info found, symbol may be delisted
+- AAPL: Failed to create cash-flow financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+- AAPL: No financials data found, symbol may be delisted
+- AAPL: Failed to create income financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+- AAPL: Failed to create balance-sheet financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+- AAPL: Failed to create cash-flow financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+- AAPL: Failed to create income financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+
 _analysis:
- <yfinance.scrapers.analysis.Analysis object at 0x7fe280e95370>_base_url:
+ <yfinance.scrapers.analysis.Analysis object at 0x7f8c9152d370>_base_url:
  https://query2.finance.yahoo.com_data:
- <yfinance.data.TickerData object at 0x7fe280543250>Documentatin for the callable _download_options:
+ <yfinance.data.TickerData object at 0x7f8c90343250>Documentatin for the callable _download_options:
   None_earnings:
  None_earnings_dates:
  {}_expirations:
@@ -10,15 +20,15 @@ _analysis:
  NoneDocumentatin for the callable _fix_unit_mixups:
   NoneDocumentatin for the callable _fix_zeroes:
   None_fundamentals:
- <yfinance.scrapers.fundamentals.Fundamentals object at 0x7fe2810bbb20>Documentatin for the callable _get_ticker_tz:
+ <yfinance.scrapers.fundamentals.Fundamentals object at 0x7f8c919ebb20>Documentatin for the callable _get_ticker_tz:
   None_history:
  None_history_metadata:
  None_holders:
- <yfinance.scrapers.holders.Holders object at 0x7fe280e953d0>_isin:
+ <yfinance.scrapers.holders.Holders object at 0x7f8c9152d3d0>_isin:
  None_news:
  []Documentatin for the callable _options2df:
   None_quote:
- <yfinance.scrapers.quote.Quote object at 0x7fe2810bbb50>Documentatin for the callable _reconstruct_intervals_batch:
+ <yfinance.scrapers.quote.Quote object at 0x7f8c919ebb50>Documentatin for the callable _reconstruct_intervals_batch:
   None_scrape_url:
  https://finance.yahoo.com/quote_shares:
  None_tz:
@@ -314,14 +324,3 @@ Name: Stock Splits, dtype: float64Documentatin for the callable stats:
   Nonesustainability:
  Noneticker:
  AAPL
-
-
--AAPL: No analysis data found, symbol may be delisted
-- AAPL: Failed to create balance-sheet financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
-- AAPL: No summary info found, symbol may be delisted
-- AAPL: Failed to create cash-flow financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
-- AAPL: No financials data found, symbol may be delisted
-- AAPL: Failed to create income financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
-- AAPL: Failed to create balance-sheet financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
-- AAPL: Failed to create cash-flow financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
-- AAPL: Failed to create income financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
