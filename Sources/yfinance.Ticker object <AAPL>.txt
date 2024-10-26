@@ -1,0 +1,327 @@
+_analysis:
+ <yfinance.scrapers.analysis.Analysis object at 0x7fe280e95370>_base_url:
+ https://query2.finance.yahoo.com_data:
+ <yfinance.data.TickerData object at 0x7fe280543250>Documentatin for the callable _download_options:
+  None_earnings:
+ None_earnings_dates:
+ {}_expirations:
+ {}Documentatin for the callable _fetch_ticker_tz:
+  None_financials:
+ NoneDocumentatin for the callable _fix_unit_mixups:
+  NoneDocumentatin for the callable _fix_zeroes:
+  None_fundamentals:
+ <yfinance.scrapers.fundamentals.Fundamentals object at 0x7fe2810bbb20>Documentatin for the callable _get_ticker_tz:
+  None_history:
+ None_history_metadata:
+ None_holders:
+ <yfinance.scrapers.holders.Holders object at 0x7fe280e953d0>_isin:
+ None_news:
+ []Documentatin for the callable _options2df:
+  None_quote:
+ <yfinance.scrapers.quote.Quote object at 0x7fe2810bbb50>Documentatin for the callable _reconstruct_intervals_batch:
+  None_scrape_url:
+ https://finance.yahoo.com/quote_shares:
+ None_tz:
+ Noneactions:
+                            Dividends  Stock Splits
+Date                                              
+1987-05-11 00:00:00-04:00   0.000536           0.0
+1987-06-16 00:00:00-04:00   0.000000           2.0
+1987-08-10 00:00:00-04:00   0.000536           0.0
+1987-11-17 00:00:00-05:00   0.000714           0.0
+1988-02-12 00:00:00-05:00   0.000714           0.0
+...                              ...           ...
+2023-08-11 00:00:00-04:00   0.240000           0.0
+2023-11-10 00:00:00-05:00   0.240000           0.0
+2024-02-09 00:00:00-05:00   0.240000           0.0
+2024-05-10 00:00:00-04:00   0.250000           0.0
+2024-08-12 00:00:00-04:00   0.250000           0.0
+
+[89 rows x 2 columns]analyst_price_target:
+ Nonebalance_sheet:
+ Empty DataFrame
+Columns: []
+Index: []balancesheet:
+ Empty DataFrame
+Columns: []
+Index: []calendar:
+ Nonecapital_gains:
+ []cash_flow:
+ Empty DataFrame
+Columns: []
+Index: []cashflow:
+ Empty DataFrame
+Columns: []
+Index: []dividends:
+ Date
+1987-05-11 00:00:00-04:00    0.000536
+1987-08-10 00:00:00-04:00    0.000536
+1987-11-17 00:00:00-05:00    0.000714
+1988-02-12 00:00:00-05:00    0.000714
+1988-05-16 00:00:00-04:00    0.000714
+                               ...   
+2023-08-11 00:00:00-04:00    0.240000
+2023-11-10 00:00:00-05:00    0.240000
+2024-02-09 00:00:00-05:00    0.240000
+2024-05-10 00:00:00-04:00    0.250000
+2024-08-12 00:00:00-04:00    0.250000
+Name: Dividends, Length: 84, dtype: float64earnings:
+ Empty DataFrame
+Columns: []
+Index: []earnings_dates:
+                            EPS Estimate  Reported EPS  Surprise(%)
+Earnings Date                                                     
+2025-07-30 06:00:00-04:00           NaN           NaN          NaN
+2025-04-30 06:00:00-04:00           NaN           NaN          NaN
+2025-01-30 16:00:00-05:00           NaN           NaN          NaN
+2024-10-31 16:00:00-04:00          1.55           NaN          NaN
+2024-08-01 16:00:00-04:00          1.35          1.40       0.0399
+2024-05-02 16:00:00-04:00          1.50          1.53       0.0197
+2024-02-01 16:00:00-05:00          2.10          2.18       0.0390
+2023-11-02 16:00:00-04:00          1.39          1.46       0.0492
+2023-08-03 16:00:00-04:00          1.19          1.26       0.0549
+2023-05-04 16:00:00-04:00          1.43          1.52       0.0603
+2023-02-02 16:00:00-05:00          1.94          1.88      -0.0288
+2022-10-27 16:00:00-04:00          1.27          1.29       0.0155earnings_forecasts:
+ Noneearnings_trend:
+ Nonefinancials:
+ Empty DataFrame
+Columns: []
+Index: []Documentatin for the callable get_actions:
+  NoneDocumentatin for the callable get_analyst_price_target:
+  NoneDocumentatin for the callable get_balance_sheet:
+  
+        :Parameters:
+            as_dict: bool
+                Return table as Python dict
+                Default is False
+            pretty: bool
+                Format row names nicely for readability
+                Default is False
+            freq: str
+                "yearly" or "quarterly"
+                Default is "yearly"
+            legacy: bool
+                Return old financials tables. Useful for when new tables not available
+                Default is False
+            proxy: str
+                Optional. Proxy server URL scheme
+                Default is None
+        Documentatin for the callable get_balancesheet:
+  NoneDocumentatin for the callable get_calendar:
+  NoneDocumentatin for the callable get_capital_gains:
+  NoneDocumentatin for the callable get_cash_flow:
+  
+        :Parameters:
+            as_dict: bool
+                Return table as Python dict
+                Default is False
+            pretty: bool
+                Format row names nicely for readability
+                Default is False
+            freq: str
+                "yearly" or "quarterly"
+                Default is "yearly"
+            legacy: bool
+                Return old financials tables. Useful for when new tables not available
+                Default is False
+            proxy: str
+                Optional. Proxy server URL scheme
+                Default is None
+        Documentatin for the callable get_cashflow:
+  NoneDocumentatin for the callable get_dividends:
+  NoneDocumentatin for the callable get_earnings:
+  
+        :Parameters:
+            as_dict: bool
+                Return table as Python dict
+                Default is False
+            freq: str
+                "yearly" or "quarterly"
+                Default is "yearly"
+            proxy: str
+                Optional. Proxy server URL scheme
+                Default is None
+        Documentatin for the callable get_earnings_dates:
+  
+        Get earning dates (future and historic)
+        :param limit: max amount of upcoming and recent earnings dates to return.
+                      Default value 12 should return next 4 quarters and last 8 quarters.
+                      Increase if more history is needed.
+
+        :param proxy: requests proxy to use.
+        :return: pandas dataframe
+        Documentatin for the callable get_earnings_forecast:
+  NoneDocumentatin for the callable get_earnings_trend:
+  NoneDocumentatin for the callable get_financials:
+  NoneDocumentatin for the callable get_history_metadata:
+  NoneDocumentatin for the callable get_income_stmt:
+  
+        :Parameters:
+            as_dict: bool
+                Return table as Python dict
+                Default is False
+            pretty: bool
+                Format row names nicely for readability
+                Default is False
+            freq: str
+                "yearly" or "quarterly"
+                Default is "yearly"
+            legacy: bool
+                Return old financials tables. Useful for when new tables not available
+                Default is False
+            proxy: str
+                Optional. Proxy server URL scheme
+                Default is None
+        Documentatin for the callable get_incomestmt:
+  NoneDocumentatin for the callable get_info:
+  NoneDocumentatin for the callable get_institutional_holders:
+  NoneDocumentatin for the callable get_isin:
+  NoneDocumentatin for the callable get_major_holders:
+  NoneDocumentatin for the callable get_mutualfund_holders:
+  NoneDocumentatin for the callable get_news:
+  NoneDocumentatin for the callable get_recommendations:
+  NoneDocumentatin for the callable get_recommendations_summary:
+  NoneDocumentatin for the callable get_rev_forecast:
+  NoneDocumentatin for the callable get_shares:
+  NoneDocumentatin for the callable get_shares_full:
+  NoneDocumentatin for the callable get_splits:
+  NoneDocumentatin for the callable get_sustainability:
+  NoneDocumentatin for the callable get_trend_details:
+  NoneDocumentatin for the callable history:
+  
+        :Parameters:
+            period : str
+                Valid periods: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
+                Either Use period parameter or use start and end
+            interval : str
+                Valid intervals: 1m,2m,5m,15m,30m,60m,90m,1h,1d,5d,1wk,1mo,3mo
+                Intraday data cannot extend last 60 days
+            start: str
+                Download start date string (YYYY-MM-DD) or _datetime.
+                Default is 1900-01-01
+            end: str
+                Download end date string (YYYY-MM-DD) or _datetime.
+                Default is now
+            prepost : bool
+                Include Pre and Post market data in results?
+                Default is False
+            auto_adjust: bool
+                Adjust all OHLC automatically? Default is True
+            back_adjust: bool
+                Back-adjusted data to mimic true historical prices
+            repair: bool
+                Detect currency unit 100x mixups and attempt repair
+                Default is False
+            keepna: bool
+                Keep NaN rows returned by Yahoo?
+                Default is False
+            proxy: str
+                Optional. Proxy server URL scheme. Default is None
+            rounding: bool
+                Round values to 2 decimal places?
+                Optional. Default is False = precision suggested by Yahoo!
+            timeout: None or float
+                If not None stops waiting for a response after given number of
+                seconds. (Can also be a fraction of a second e.g. 0.01)
+                Default is 10 seconds.
+            debug: bool
+                If passed as False, will suppress
+                error message printing to console.
+            raise_errors: bool
+                If True, then raise errors as
+                exceptions instead of printing to console.
+        history_metadata:
+ {'currency': 'USD', 'symbol': 'AAPL', 'exchangeName': 'NMS', 'fullExchangeName': 'NasdaqGS', 'instrumentType': 'EQUITY', 'firstTradeDate': 345479400, 'regularMarketTime': 1729886401, 'hasPrePostMarketData': True, 'gmtoffset': -14400, 'timezone': 'EDT', 'exchangeTimezoneName': 'America/New_York', 'regularMarketPrice': 231.41, 'fiftyTwoWeekHigh': 233.2, 'fiftyTwoWeekLow': 229.57, 'regularMarketDayHigh': 233.2, 'regularMarketDayLow': 229.57, 'regularMarketVolume': 37918358, 'longName': 'Apple Inc.', 'shortName': 'Apple Inc.', 'chartPreviousClose': 0.128, 'priceHint': 2, 'currentTradingPeriod': {'pre': {'timezone': 'EDT', 'start': 1729843200, 'end': 1729863000, 'gmtoffset': -14400}, 'regular': {'timezone': 'EDT', 'start': 1729863000, 'end': 1729886400, 'gmtoffset': -14400}, 'post': {'timezone': 'EDT', 'start': 1729886400, 'end': 1729900800, 'gmtoffset': -14400}}, 'dataGranularity': '1d', 'range': '', 'validRanges': ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max']}income_stmt:
+ Empty DataFrame
+Columns: []
+Index: []incomestmt:
+ Empty DataFrame
+Columns: []
+Index: []info:
+ Noneinstitutional_holders:
+                               Holder   Shares  ...   % Out         Value
+0                 Vanguard Group Inc    1.32B  ...  0.0871  306611365082
+1                     Blackrock Inc.    1.05B  ...  0.0691  243030431016
+2           State Street Corporation  528.08M  ...  0.0347  122201879106
+3            Berkshire Hathaway, Inc     400M  ...  0.0263   92564001464
+4                           FMR, LLC  345.64M  ...  0.0227   79983479229
+5      Geode Capital Management, LLC  313.37M  ...  0.0206   72517812072
+6                     Morgan Stanley  231.03M  ...  0.0152   53463449196
+7      Price (T.Rowe) Associates Inc  228.49M  ...  0.0150   52874588953
+8          JP Morgan Chase & Company  180.79M  ...  0.0119   41835950646
+9  Norges Bank Investment Management  177.53M  ...  0.0117   41083248650
+
+[10 rows x 5 columns]isin:
+ Nonemajor_holders:
+   Breakdown                             Unnamed: 1
+0     2.70%        % of Shares Held by All Insider
+1    60.94%       % of Shares Held by Institutions
+2    62.63%        % of Float Held by Institutions
+3      6459  Number of Institutions Holding Sharesmutualfund_holders:
+                                               Holder  ...         Value
+0             Vanguard Total Stock Market Index Fund  ...  106496713444
+1                            Vanguard 500 Index Fund  ...   85609091361
+2                             SPDR S&P 500 ETF Trust  ...   42602041563
+3                            Fidelity 500 Index Fund  ...   41093451054
+4                           iShares Core S&P 500 ETF  ...   38411317705
+5                         Vanguard Growth Index Fund  ...   33262895678
+6        Invesco ETF Tr-Invesco QQQ Tr, Series 1 ETF  ...   26424322094
+7  Vanguard Institutional Index Fund-Institutiona...  ...   21679438618
+8         Vanguard Information Technology Index Fund  ...   15519931210
+9                    iShares Russell 1000 Growth ETF  ...   12090781377
+
+[10 rows x 5 columns]news:
+ [{'uuid': '02db4b34-34e9-397e-96d9-8b65d2a1d147', 'title': '3 Warren Buffett Stocks That Are Screaming Buys Right Now', 'publisher': 'Motley Fool', 'link': 'https://finance.yahoo.com/m/02db4b34-34e9-397e-96d9-8b65d2a1d147/3-warren-buffett-stocks-that.html', 'providerPublishTime': 1729944000, 'type': 'STORY', 'thumbnail': {'resolutions': [{'url': 'https://s.yimg.com/uu/api/res/1.2/CsnTCuDBuSfO_GNS94dr4g--~B/aD0xMzY1O3c9MjA0ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/motleyfool.com/29fc792b1a241370f7bb823053d8181e', 'width': 2048, 'height': 1365, 'tag': 'original'}, {'url': 'https://s.yimg.com/uu/api/res/1.2/11ZLdLaReZU7vcaPnmKcHA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/29fc792b1a241370f7bb823053d8181e', 'width': 140, 'height': 140, 'tag': '140x140'}]}, 'relatedTickers': ['ULTA', 'AAPL']}, {'uuid': 'af359057-4d38-4641-a34b-391e701b4a2c', 'title': 'Chart of the Week: Taking a closer look at the Magnificent Seven', 'publisher': 'Yahoo Finance', 'link': 'https://finance.yahoo.com/news/chart-of-the-week-taking-a-closer-look-at-the-magnificent-seven-100014792.html', 'providerPublishTime': 1729936814, 'type': 'STORY', 'thumbnail': {'resolutions': [{'url': 'https://s.yimg.com/uu/api/res/1.2/5HsYDBzZr7aj2xfWFd7aKA--~B/aD0yMDg0O3c9MzAwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2024-10/958f24c0-92ef-11ef-bbab-f3ba887a2060', 'width': 3000, 'height': 2084, 'tag': 'original'}, {'url': 'https://s.yimg.com/uu/api/res/1.2/TosmRxcG1X3QXn53dVeKWw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2024-10/958f24c0-92ef-11ef-bbab-f3ba887a2060', 'width': 140, 'height': 140, 'tag': '140x140'}]}, 'relatedTickers': ['MSFT', 'TSLA', 'AMZN', 'AAPL', 'GOOG', 'NVDA']}, {'uuid': '1b9b04ba-7a2e-3ff7-89ce-16ec271be25b', 'title': 'Meet the Ultra-Low-Cost Vanguard ETF That Has 33% of Its Holdings in Nvidia, Apple, and Microsoft', 'publisher': 'Motley Fool', 'link': 'https://finance.yahoo.com/m/1b9b04ba-7a2e-3ff7-89ce-16ec271be25b/meet-the-ultra-low-cost.html', 'providerPublishTime': 1729931580, 'type': 'STORY', 'thumbnail': {'resolutions': [{'url': 'https://s.yimg.com/uu/api/res/1.2/dUTEMEZtgz0M0Qs2Ftw9Lw--~B/aD02MzM7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/8559950b6a6d3f1e0a028f76c18273d8', 'width': 1200, 'height': 633, 'tag': 'original'}, {'url': 'https://s.yimg.com/uu/api/res/1.2/cl3TPL5fCBAF_OrP3ffwew--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/8559950b6a6d3f1e0a028f76c18273d8', 'width': 140, 'height': 140, 'tag': '140x140'}]}, 'relatedTickers': ['MSFT', 'NVDA', '^GSPC', 'AAPL']}, {'uuid': '55f35842-d011-3622-983a-9ec01e0b8ce7', 'title': "Should You Buy Stocks at a Record High? Here's What Warren Buffett Is Doing.", 'publisher': 'Motley Fool', 'link': 'https://finance.yahoo.com/m/55f35842-d011-3622-983a-9ec01e0b8ce7/should-you-buy-stocks-at-a.html', 'providerPublishTime': 1729926900, 'type': 'STORY', 'thumbnail': {'resolutions': [{'url': 'https://s.yimg.com/uu/api/res/1.2/qFw16dRrWTSFCHk_9QRtAw--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/a3a81352c401bff907f75bbb5c3a63e9', 'width': 1400, 'height': 933, 'tag': 'original'}, {'url': 'https://s.yimg.com/uu/api/res/1.2/XV.Tpr8jJPQjGMrTeou8pA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/a3a81352c401bff907f75bbb5c3a63e9', 'width': 140, 'height': 140, 'tag': '140x140'}]}, 'relatedTickers': ['^GSPC', 'AAPL']}, {'uuid': 'b9efb844-a160-3f55-9901-2abc7d7e59b8', 'title': 'Jim Cramer on Apple Inc. (AAPL)’s iPhone Sales: ‘Not Enough To Make Me Wanna Sell, But Enough To Ding The Stock’', 'publisher': 'Insider Monkey', 'link': 'https://finance.yahoo.com/news/jim-cramer-apple-inc-aapl-233504574.html', 'providerPublishTime': 1729899304, 'type': 'STORY', 'thumbnail': {'resolutions': [{'url': 'https://s.yimg.com/uu/api/res/1.2/fTPNobtT0bdcSxj2xXAamw--~B/aD04MTY7dz0xNDU2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/bd47dc2e86b4a3086f845d200d9daf1f', 'width': 1456, 'height': 816, 'tag': 'original'}, {'url': 'https://s.yimg.com/uu/api/res/1.2/nIyTyNRglKMNfFFMGli.7A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/bd47dc2e86b4a3086f845d200d9daf1f', 'width': 140, 'height': 140, 'tag': '140x140'}]}, 'relatedTickers': ['AAPL']}, {'uuid': '686b80b5-71f6-3167-bc22-4b928401d824', 'title': 'Jury awards Apple $250 in design patent lawsuit against Masimo', 'publisher': 'CNN Business', 'link': 'https://finance.yahoo.com/m/686b80b5-71f6-3167-bc22-4b928401d824/jury-awards-apple-%24250-in.html', 'providerPublishTime': 1729897704, 'type': 'STORY', 'thumbnail': {'resolutions': [{'url': 'https://s.yimg.com/uu/api/res/1.2/7j.aKRtSTQXXUEf02q6XMQ--~B/aD01NDA7dz05NjA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/cnn_business_articles_218/71d0182c65bc2d120b9bb2acf5f25f78', 'width': 960, 'height': 540, 'tag': 'original'}, {'url': 'https://s.yimg.com/uu/api/res/1.2/wcFeK0xNa6U9RcPYHCYB4A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/cnn_business_articles_218/71d0182c65bc2d120b9bb2acf5f25f78', 'width': 140, 'height': 140, 'tag': '140x140'}]}, 'relatedTickers': ['MASI', 'AAPL']}, {'uuid': '40f010f7-07c0-38e5-9602-e7d0698d08a2', 'title': 'PCE data, Big Tech earnings: What to Watch', 'publisher': 'Yahoo Finance Video', 'link': 'https://finance.yahoo.com/video/pce-data-big-tech-earnings-215250140.html', 'providerPublishTime': 1729893170, 'type': 'VIDEO', 'thumbnail': {'resolutions': [{'url': 'https://s.yimg.com/uu/api/res/1.2/vqgVe66P.e0efPuwtAqx8A--~B/aD00MDU7dz03MjA7YXBwaWQ9eXRhY2h5b24-/https://s.yimg.com/os/creatr-uploaded-images/2024-10/7721c7b0-931a-11ef-bebd-2bfdad9e3ee8', 'width': 720, 'height': 405, 'tag': 'original'}, {'url': 'https://s.yimg.com/uu/api/res/1.2/i.0VRjanxCjtz55qNfROMA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2024-10/7721c7b0-931a-11ef-bebd-2bfdad9e3ee8', 'width': 140, 'height': 140, 'tag': '140x140'}]}, 'relatedTickers': ['^GSPC', 'MSFT', '^DJI', 'AAPL', 'AMZN', 'INTC', 'META', 'GOOG', '^IXIC']}, {'uuid': '1bff6e93-0c7d-312b-9d06-1772a32f19ab', 'title': "Between Mag 7 earnings and jobs data, next week is 'the Super Bowl for investors'", 'publisher': 'Yahoo Finance Video', 'link': 'https://finance.yahoo.com/video/between-mag-7-earnings-jobs-213000281.html', 'providerPublishTime': 1729891800, 'type': 'VIDEO', 'thumbnail': {'resolutions': [{'url': 'https://s.yimg.com/uu/api/res/1.2/URMSqFT5k6UXOby.ne2xgA--~B/aD0zMzc4O3c9NjAwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2024-10/57664f50-930f-11ef-9fdf-9ab90347b7e2', 'width': 6000, 'height': 3378, 'tag': 'original'}, {'url': 'https://s.yimg.com/uu/api/res/1.2/Jmjl3FKemb6KjLy2mDahow--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2024-10/57664f50-930f-11ef-9fdf-9ab90347b7e2', 'width': 140, 'height': 140, 'tag': '140x140'}]}, 'relatedTickers': ['META', 'AAPL', 'AMZN', '^IXIC', '^GSPC', 'GOOG', 'MSFT', '^DJI']}]Documentatin for the callable option_chain:
+  Noneoptions:
+ ()quarterly_balance_sheet:
+ Empty DataFrame
+Columns: []
+Index: []quarterly_balancesheet:
+ Empty DataFrame
+Columns: []
+Index: []quarterly_cash_flow:
+ Empty DataFrame
+Columns: []
+Index: []quarterly_cashflow:
+ Empty DataFrame
+Columns: []
+Index: []quarterly_earnings:
+ Empty DataFrame
+Columns: []
+Index: []quarterly_financials:
+ Empty DataFrame
+Columns: []
+Index: []quarterly_income_stmt:
+ Empty DataFrame
+Columns: []
+Index: []quarterly_incomestmt:
+ Empty DataFrame
+Columns: []
+Index: []recommendations:
+ Nonerecommendations_summary:
+ Nonerevenue_forecasts:
+ Nonesession:
+ Noneshares:
+ Nonesplits:
+ Date
+1987-06-16 00:00:00-04:00    2.0
+2000-06-21 00:00:00-04:00    2.0
+2005-02-28 00:00:00-05:00    2.0
+2014-06-09 00:00:00-04:00    7.0
+2020-08-31 00:00:00-04:00    4.0
+Name: Stock Splits, dtype: float64Documentatin for the callable stats:
+  Nonesustainability:
+ Noneticker:
+ AAPL
+
+
+-AAPL: No analysis data found, symbol may be delisted
+- AAPL: Failed to create balance-sheet financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+- AAPL: No summary info found, symbol may be delisted
+- AAPL: Failed to create cash-flow financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+- AAPL: No financials data found, symbol may be delisted
+- AAPL: Failed to create income financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+- AAPL: Failed to create balance-sheet financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+- AAPL: Failed to create cash-flow financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
+- AAPL: Failed to create income financials table for reason: YFinanceDataException("Parsing FinancialTemplateStore failed, reason: KeyError('FinancialTemplateStore')")
