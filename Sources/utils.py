@@ -18,6 +18,3 @@ def generate_docs(obj: Any, isSaved:bool = True,
         with open(file_path, 'w') as file:
             file.write(opt)
     return opt
-# import yfinance as yf
-# obj = yf.Ticker("AAPL")
-# generate_docs(obj)
