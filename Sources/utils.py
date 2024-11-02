@@ -2,6 +2,16 @@ from typing import Any
 import json
 import requests
 import os
+from collections import defaultdict
+from datetime import date
+def set_suggested_list(suggested_list: list[str], path: str ="./Sources/tickers",
+                      file_name:str = "selected_tickers") -> None:
+    tickers_dict: defaultdict = {'tickers': suggested_list, 'date':date.today()}
+    try:
+        with open(f"{path}/{file_name}.json", 'w') as f:
+            json.dump(tickers_dict,f)
+    except Exception as e:
+        raise(e)
 def generate_docs(obj: Any, isSaved:bool = True,
                   folder_path: str = '/Users/sinazabanfahm/FinAT/Sources/docs') -> str:
     opt = ""
@@ -53,5 +63,16 @@ def get_tickers_json(exchange: str, links_file: str = './Sources/links/tickers1.
             load_tickers_json(exchange = exchange, links_file = links_file, save_folder=load_folder)
         with open (load_path,'r') as f:
             return json.load(f)
+    except Exception as e:
+        raise(e)
+
+
+
+def set_suggested_list(suggested_list: list[str], path: str ="./Sources/tickers",
+                      file_name:str = "selected_tickers") -> None:
+    tickers_dict: defaultdict = {'tickers': suggested_list, 'date':date.today()}
+    try:
+        with open(f"{path}/{file_name}.json", 'w') as f:
+            json.dump(tickers_dict,f)
     except Exception as e:
         raise(e)
