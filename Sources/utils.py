@@ -4,14 +4,6 @@ import requests
 import os
 from collections import defaultdict
 from datetime import date
-def set_suggested_list(suggested_list: list[str], path: str ="./Sources/tickers",
-                      file_name:str = "selected_tickers") -> None:
-    tickers_dict: defaultdict = {'tickers': suggested_list, 'date':date.today()}
-    try:
-        with open(f"{path}/{file_name}.json", 'w') as f:
-            json.dump(tickers_dict,f)
-    except Exception as e:
-        raise(e)
 def generate_docs(obj: Any, isSaved:bool = True,
                   folder_path: str = '/Users/sinazabanfahm/FinAT/Sources/docs') -> str:
     opt = ""
@@ -72,22 +64,6 @@ def set_suggested_list(suggested_list: list[str], path: str ="./Sources/tickers"
     try:
         with open(f"{path}/{file_name}.json", 'w') as f:
             json.dump(tickers_dict,f)
-    except Exception as e:
-        raise(e)
-    
-def get_suggested_list(path: str = "./Sources/tickers", 
-                       file_name: str = "selected_tickers"):
-    file_path = path + "/" + file_name
-    try:
-        with open(file_path, 'r') as f:
-            links = json.load(f)
-            exchange_url = links[exchange]
-            response = requests.get(exchange_url)
-        if response.status_code == 200:
-            tickers_list = json.loads(response.text)
-            tickers_dict = {ticker['symbol']: ticker for ticker in tickers_list}
-        else:
-            print(f"Failed to download file. Status code: {response.status_code}")
     except Exception as e:
         raise(e)
     
