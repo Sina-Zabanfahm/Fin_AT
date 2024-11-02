@@ -65,9 +65,7 @@ def get_tickers_json(exchange: str, links_file: str = './Sources/links/tickers1.
             return json.load(f)
     except Exception as e:
         raise(e)
-
-
-
+    
 def set_suggested_list(suggested_list: list[str], path: str ="./Sources/tickers",
                       file_name:str = "selected_tickers") -> None:
     tickers_dict: defaultdict = {'tickers': suggested_list, 'date':date.today()}
@@ -76,3 +74,30 @@ def set_suggested_list(suggested_list: list[str], path: str ="./Sources/tickers"
             json.dump(tickers_dict,f)
     except Exception as e:
         raise(e)
+    
+def get_suggested_list(path: str = "./Sources/tickers", 
+                       file_name: str = "selected_tickers"):
+    file_path = path + "/" + file_name
+    try:
+        with open(file_path, 'r') as f:
+            links = json.load(f)
+            exchange_url = links[exchange]
+            response = requests.get(exchange_url)
+        if response.status_code == 200:
+            tickers_list = json.loads(response.text)
+            tickers_dict = {ticker['symbol']: ticker for ticker in tickers_list}
+        else:
+            print(f"Failed to download file. Status code: {response.status_code}")
+    except Exception as e:
+        raise(e)
+    
+def get_suggested_list(path: str = "./Sources/tickers", 
+                       file_name: str = "selected_tickers.json") -> dict():
+    file_path = path + "/" + file_name
+    tickers= dict()
+    try:
+        with open(file_path, 'r') as f:
+            tickers= json.load(f)
+    except Exception as e:
+        raise(e)
+    return tickers
